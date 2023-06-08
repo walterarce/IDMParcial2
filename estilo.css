@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(27, 95, 43, 0.37);
+    font-family: "Montserrat", sans-serif;
+
+
+}
+
+body > h1 img {
+    width: 200px;
+    height: 100px;
+}
+
+header {
+    width: 100%;
+    height: 60vh;
+
+}
+
+h1 {
+    display: none;
+}
+
+.bannertop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannertop div picture {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+    color: #A6CE88;
+    font-size: 26px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    padding: 1rem;
+}
+
+h3 {
+    font-family: "Raleway", sans-serif;
+    color: #2D4815
+}
+
+section article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+section article div > div {
+    background-color: #A6CE88;
+    padding: 1rem;
+    width: 100%;
+
+}
+
+section article div > div > img {
+    max-width: 50%;
+    max-height: 50%;
+    border: 2px solid black;
+}
+
+section article div > div > iframe {
+    border: 2px solid black;
+}
+
+
+
+footer {
+    background-color: #1B5F2B;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+
+}
+footer div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    color: #1B5F2B;
+}
+
+input[type="text"],
+
+input[type="email"],
+
+input[type="checkbox"],
+
+input[type="radio"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #1B5F2B;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: 6px;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"]:checked + .checkmark:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #1B5F2B;
+}
+
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: #1B5F2B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#barra {
+    width: 100%;
+    height: calc(100vh - 4em);
+    position: absolute;
+    top: 4em;
+    left: -100%;
+    background: #A6CE88;
+    transition: left .5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+#barra li {
+    list-style: none;
+    margin: 1em;
+    width: 80%;
+}
+
+#barra li a {
+    text-decoration: none;
+    display: block;
+    background: #2D4815;
+    color: white;
+    text-align: center;
+    line-height: 2em;
+}
+/*Mobile*/
+@media screen and (max-width: 991px) {
+
+    #menu > a {
+        list-style: none;
+        text-indent: -100px;
+        overflow: hidden;
+        margin-top: .75em;
+        background: url("images/menu.png") no-repeat center center;
+        background-size: cover;
+        height: 2.5em;
+        width: 2.5em;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #cerrar {
+        display: none;
+    }
+
+    #abrir:focus ~ #barra {
+        left: 0;
+    }
+
+    #abrir:focus ~ #cerrar {
+        display: block;
+    }
+
+    .logo {
+        width: 240px;
+        margin-left: 50px;
+    }
+    div picture {
+        position: absolute;
+        top: 0;
+        margin-top: 9rem;
+        z-index: -3;
+    }
+
+}
+/*Pc*/
+@media screen and (min-width: 992px) {
+    body {
+        background-color: rgba(27, 95, 43, 0.37);
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100%;
+        height: 60vh;
+        margin: auto;
+        max-width: 1100px;
+
+    }
+
+    section {
+        padding: 1.1rem;
+    }
+
+    section p {
+        margin: 1rem 0;
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    h1 {
+        padding-left: 1.5rem;
+        display: none;
+    }
+
+    div picture {
+        position: absolute;
+        top: 0;
+        margin-top: 12rem;
+        z-index: -3;
+    }
+
+    section article h2 {
+        font-family: "Raleway", Helvetica, sans-serif;
+        color: #A6CE88;
+        font-size: 48px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-top: -20px;
+        margin-left: 20px;
+        padding-top: 0;
+    }
+
+    h3 {
+
+        font-family: "Raleway", sans-serif;
+        color: #2D4815;
+
+    }
+
+    section article div > div img {
+        max-width: 50%;
+        max-height: 50%;
+        object-fit: contain;
+    }
+
+    section article div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        padding: 1em;
+        margin: 0 0.5rem 1rem 0.5rem;
+
+    }
+
+    section article div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1rem;
+        border: 1px solid black;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .franquiciastyle {
+        display: block;
+    }
+    .franquiciastyle div > iframe {
+        aspect-ratio: 16 / 9;
+        width: 560px;
+        height: 315px;
+    }
+
+    #abrir, #cerrar {
+        display: none;
+    }
+
+    #menu {
+        flex: 1;
+    }
+
+    #barra {
+        position: static;
+        height: auto;
+        background: none;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #barra li {
+        width: 130px;
+        margin: 0 1em;
+    }
+
+}

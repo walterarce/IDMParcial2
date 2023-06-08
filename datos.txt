@@ -1,0 +1,11 @@
+Escuela de Arte Multimedial Da Vinci
+CARRERA: Diseño y Programación Web
+MATERIA: Interacción con Dispositivos Móviles
+TRABAJO PRÁCTICO: Examen Parcial 1
+PROFESOR: D’Addezio Alejandro
+ALUMNO:Walter Arce
+CUATRIMESTRE: 2do Cuatrimestre
+COMISIÓN: DWN2AV
+TURNO: Noche
+FECHA DE ENTREGA: 17/05/2023
+URL DEL SITIO: https://www.cosas3d.com/idm
