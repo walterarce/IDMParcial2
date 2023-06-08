@@ -1,7 +1,7 @@
 Escuela de Arte Multimedial Da Vinci
 CARRERA: Diseño y Programación Web
 MATERIA: Interacción con Dispositivos Móviles
-TRABAJO PRÁCTICO: Examen Parcial 1
+TRABAJO PRÁCTICO: Examen Parcial 2
 PROFESOR: D’Addezio Alejandro
 ALUMNO:Walter Arce
 CUATRIMESTRE: 2do Cuatrimestre
