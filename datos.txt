@@ -7,5 +7,5 @@ ALUMNO:Walter Arce
 CUATRIMESTRE: 2do Cuatrimestre
 COMISIÓN: DWN2AV
 TURNO: Noche
-FECHA DE ENTREGA: 17/05/2023
-URL DEL SITIO: https://www.cosas3d.com/idm
+FECHA DE ENTREGA: 21/06/2023
+URL DEL SITIO: https://cosas3d.com/parcial2idm/
