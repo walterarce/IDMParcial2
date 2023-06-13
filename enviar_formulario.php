@@ -1,40 +1,32 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+require 'vendor/autoload.php';
+    $enviado="enviado.html";
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.hostinger.com';
+    $mail->Port = 587;
+    $mail->SMTPAuth = true;
+    $mail->Username = 'info@cosas3d.com';
+    $mail->Password = 'prueba123A@';
+    $mail->setFrom('info@cosas3d.com', 'Walter Arce DWN2AV');
+    $mail->addAddress('walterarce@gmail.com', 'Walter Arce');
+    if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+        $mail->Subject = 'Contacto Eco Energia';
+        $mail->isHTML(false);
+        $mail->Body = <<<EOT
+Email: {$_POST['email']}
+Name: {$_POST['name']}
+Message: {$_POST['message']}
+Recibir Novedades: {$_POST['novedades']}
+EOT;
+        if (!$mail->send()) {
+            $msg = 'Disculpas, el email no pudo enviarse';
+        } else {
+            $msg = 'Mensaje enviado! , gracias por contactarse con nosotros.';
+        }
+    } else {
+        $msg = 'Share it with us!';
+    }
 
-
-$enviaPara = 'walter.arce@davinci.edu.ar';
-
-$subject = 'Contacto para EcoEnergia';
-
-/* ruta relativa desde ESTE documento al html que quiero que se abra después de mandar el mail. También se puede poner en target una caja que estuviera display none en el mismo html que contiene el form y que al enviar el mail y volver a ese mismo html, se ajuste display block al entrar en target (en vez de ponerla en target con un vínculo lo hacemos al volver desde el php luego de enviar el mail), por ejemplo, contacto.html#enviado */
-
-$enviado="enviado.html";
-
-
-//DE ACÁ PARA ABAJO NO TOCAR...
-$mensaje = '';
-$primero = true;
-foreach($_POST as $indice => $valor){
-	if(is_array($valor)){
-		$mensaje .= '<strong>'.$indice.': </strong><ul>';
-		foreach($valor as $item){
-			$mensaje .= '<li>'.$item .'</li>';
-		}				
-		$mensaje .= '</ul><br>'; 
-	}else{
-		if($primero){
-			$from = $valor;
-			$primero = false;
-		}
-		$mensaje .= '<strong>'.$indice.': </strong>';
-		$mensaje .= $valor . '<br>';
-		if(strpos($valor, '@')>3 && strpos($valor, '.') > -1){
-			$from = $valor;
-		}
-	}
-}
-$mail_headers  = "MIME-Version: 1.0\r\n";
-$mail_headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
-$mail_headers .= 'From: ' . $from . "\r\n";
-@mail($enviaPara, $subject, $mensaje, $mail_headers); 
-header("Location: $enviado");
 ?>

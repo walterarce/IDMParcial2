@@ -1,21 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
-:root {
-    --primario: #660ef2;
-    --secundario: #ffb100;
-    --fuente:    'Roboto', sans-serif;
-}
-body {
-    font-family: var(--fuente);
-}
-.header {
-    background-color: var(--primario)!important;
+h1{
 
+    background-image:url("images/980w/logo_1.png");
 }
 
-.header h1 {
-    color: var(--secundario);
-    font-weight: 900;
-}
+
 .header p {
     font-size: 2rem;
     margin: 0;
@@ -27,38 +15,52 @@ a {
 
 }
 a:hover{
-    color: #A6CE88 !important;
+    color: #ffffff !important;
 }
 
-.seccion {
-    min-height: 5em;
-    padding: 2rem;
-}
+
 body {
     background-color: rgba(27, 95, 43, 0.37);
     font-family: "Montserrat", sans-serif;
 
 }
 
-body > h1 img {
-    width: 200px;
-    height: 100px;
+#logo-heading {
+    background-image: url('images/980w/logo_1.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    text-indent: -9999px;
+    height: 0px;
 }
 
-h1 {
-    display: none;
+footer {
+    background-color: rgba(27, 95, 43, 0.7);
+    color: white;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    padding: 20px 0;
+
+}
+footer div{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-a {
-    font-family: "Montserrat", sans-serif;
-    color: #2D4815;
-    font-weight: bold;
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
 }
+footer a:hover {
+    color: white;
+}
+
 
 h2 {
     font-family: "Raleway", sans-serif;
     color: #A6CE88;
-    font-size: 26px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-left: 20px;
     padding: 1rem;
@@ -74,7 +76,13 @@ h3 {
     height: 315px;
 }
 
+.carousel-control-next {
+    background-color: rgba(0, 128, 0, 0.5);
 
+}
+.carousel-control-prev {
+    background-color: rgba(0, 128, 0, 0.5);
+}
 
 section article div > div {
     background-color: #A6CE88;
@@ -86,24 +94,6 @@ section article div > div > img {
     border: 2px solid black;
 }
 
-footer {
-    background-color: #1B5F2B;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-
-}
-footer div{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-    margin: 0 20px;
-
-}
 
 form {
     max-width: 600px;
@@ -137,6 +127,15 @@ input[type="radio"] {
     font-size: 16px;
     background-color: #1B5F2B;
 }
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #1B5F2B;
+}
 
 input[type="radio"] {
     position: absolute;
@@ -146,11 +145,11 @@ input[type="radio"] {
     width: 0;
 }
 
-.checkmark {
+input.checkmark {
     display: inline-block;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #1B5F2B;
     border-radius: 50%;
     margin-right: 10px;
     position: relative;
@@ -170,7 +169,7 @@ input[type="radio"]:checked + .checkmark:after {
     background: #1B5F2B;
 }
 
-button[type="submit"] {
+input[type="submit"] {
     padding: 0.5rem 1rem;
     background-color: #1B5F2B;
     color: #fff;
@@ -179,11 +178,5 @@ button[type="submit"] {
     font-size: 16px;
     cursor: pointer;
     margin-bottom: 1rem;
-}
-
-.social-icons a {
-    color: #fff;
-    font-size: 20px;
-    margin-right: 10px;
 }
 
