@@ -16,14 +16,15 @@ require 'vendor/autoload.php';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
 Email: {$_POST['email']}
-Name: {$_POST['name']}
-Message: {$_POST['message']}
+Nombre: {$_POST['nombre']}
+Mensaje: {$_POST['mensaje']}
 Recibir Novedades: {$_POST['novedades']}
 EOT;
         if (!$mail->send()) {
             $msg = 'Disculpas, el email no pudo enviarse';
         } else {
             $msg = 'Mensaje enviado! , gracias por contactarse con nosotros.';
+            header("Location: $enviado");
         }
     } else {
         $msg = 'Share it with us!';
